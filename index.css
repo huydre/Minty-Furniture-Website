@@ -2,6 +2,13 @@ p {
     color: #909090;
 }
 
+/* Hero Section */
+
+.count {
+  font-size: 32px;
+  font-weight: 700;
+}
+
 .small-img {
     height: 70px;
     width: auto;
