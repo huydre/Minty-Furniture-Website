@@ -1,0 +1,164 @@
+p {
+    color: #909090;
+}
+
+.small-img {
+    height: 70px;
+    width: auto;
+    /* rounded */
+    border-radius: 30%;
+}
+
+.discount-section {
+    background-image: url('/assets/discount-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.discount-section p {
+    color: white;
+
+}
+
+.input-container {
+    position: relative;
+    width: auto;
+}
+
+.input-container input[type="text"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+    color: white; /* Add this line to change cursor color to white */
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+}
+/* Product */
+
+.product-section h6  {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.product-section h5  {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.gallery-item1 {
+    background-image: url('/assets/ban-an.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100%;
+    height: 400px;
+}
+
+.gallery-item2 {
+    height: 250px;
+    background-image: url('/assets/modern-chair-with-pillow.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.gallery-item3 {
+    height: 250px;
+    background-image: url('/assets/pro_mau_tu_nhien_noi_that_moho_narvik__6__c1d88e443a544802928070b5ab4a6a36_master.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.gallery-item4 {
+    height: 400px;
+    background-image: url('/assets/treo-tranh-phong-khach.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Slide */
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 25s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    height: 130px;
+    margin: 0 40px;
+  }
