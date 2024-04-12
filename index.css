@@ -2,11 +2,50 @@ p {
     color: #909090;
 }
 
+/* Keyframes */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Hero Section */
 
 .count {
   font-size: 32px;
   font-weight: 700;
+}
+
+.count-card {
+  animation: fade-up 0.5s ease 0.4s;
 }
 
 .small-img {
@@ -119,15 +158,6 @@ p {
 
 /* Slide */
 
-@keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  
   .logos {
     overflow: hidden;
     padding: 60px 0;
